@@ -1,1 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ids xmlns="http://standards.buildingsmart.org/IDS">
+  <specification name="Beam dimension naming" ifcVersion="IFC4">
+    <applicability>
+      <entity>
+        <name>IfcBeam</name>
+      </entity>
+    </applicability>
+    <requirements>
+      <attribute>
+        <name>Name</name>
+        <value>
+          <!-- e.g. 300x450, 300 x 450 mm, 0.30x0.45 m -->
+          <simpleValue pattern="\d+\s*[xX]\s*\d+.*"/>
+        </value>
+      </attribute>
+    </requirements>
+  </specification>
+</ids>
 
