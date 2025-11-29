@@ -58,6 +58,13 @@ This provides transparent, model-based evidence for the claims in the ABD report
 pip install ifcopenshell pandas openpyxl
 
 
-## To-Be Workflow
-![To-Be Diagram](img/TO-BE.png)
+## Process Diagrams
+
+### As-Is Workflow
+![As-Is](img/AS-IS.svg)
+
+### To-Be Workflow
+![To-Be](img/TO-BE.png)
+
+
 
