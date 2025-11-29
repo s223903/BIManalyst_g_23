@@ -87,9 +87,13 @@ This provides **transparent** and **model-based evidence** for the structural cl
 - Python 3.x  
 - Required packages:
 
-```bash
 `pip install ifcopenshell pandas openpyxl`
 
 ---
 
 # 3.Running the program
+### ✔ 1. Place your IFC file on your local machine.
+
+### ✔ 2. Edit the path inside main.py:
+model_path = Path("C:/Users/.../YourModel.ifc")
+
