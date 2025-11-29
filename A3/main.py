@@ -19,7 +19,6 @@ from beam_check_tool import (
 # USER SETTINGS
 # -----------------------------------------
 
-# 👉 CHANGE THIS to match the IFC model on your computer
 model_path = Path(r"C:\Users\Aisha Arfan\OneDrive - Danmarks Tekniske Universitet\Kandidat\1. Semester\BIM Modellering\A2 Use Case\25-16-D-STR.ifc")
 
 MIN_WIDTH_MM = 200.0
