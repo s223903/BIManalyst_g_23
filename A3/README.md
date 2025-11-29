@@ -1,71 +1,94 @@
 # A3 – Automated Verification of Structural Beam Claims  
 ### Advanced Building Design — DTU — 2025  
-**Author:** Aisha and Fashi 
+**Authors:** Aisha & Fashi  
 
 ---
 
-## 1. About the Tool
+# 1. About the Tool
 
-### Problem / Claim
+## Problem / Claim
 
-In Advanced Building Design reports, structural teams frequently claim:
+In the Advanced Building Design (ABD) course, structural teams frequently claim:
 
 > “All primary reinforced concrete beams satisfy the minimum width requirement and Eurocode 2 minimum reinforcement rules.”
 
-Today, this is almost always checked manually, using drawings and spreadsheets.  
-This is time-consuming and error-prone, and there is no automatic link between the IFC model and the design claim.
+However:
+- These checks are often done manually  
+- They rely on spreadsheets or drawings  
+- They are **not linked** to the IFC model  
+- They are time-consuming and error-prone  
 
-### Where we found the problem
+Our tool automates this process.
 
-During the ABD course we observed that several structural safety claims in the design reports were not automatically verifiable from the BIM model.  
-The minimum width requirement for reinforced concrete beams is one of the most common undocumented assumptions.
+---
 
-### Description of the tool
+## Where the Problem Was Found
 
-The tool is a Python script using **IfcOpenShell** that:
+During the ABD course, we observed that several structural performance claims in the report were **not automatically verifiable** from the BIM model.
 
-1. Reads all `IfcBeam` elements from an IFC model.  
-2. Extracts cross-section dimensions (b × h) from:
-   - `IfcMaterialProfileSetUsage` (material profile sets)  
-   - the Body representation (`IfcExtrudedAreaSolid.SweptArea`)  
-   - or, as a fallback, parses beam names/tags like `"300x450"` or `"300x450 mm"`.
-3. Converts dimensions to millimetres and identifies:
-   - `b_mm` = beam width (smaller side)  
-   - `h_mm` = beam height (larger side)
-4. Checks a **minimum width requirement** (default: 200 mm).  
-5. Estimates **Eurocode 2 design capacities** based on minimum reinforcement:
-   - minimum longitudinal reinforcement area `As_min`  
-   - bending resistance `M_Rd`  
-   - concrete shear resistance `V_Rd,c`  
-   - shear resistance from minimum stirrups `V_Rd,s`.
-6. Exports all results to an **Excel file (.xlsx)**, one row per beam, with:
-   - `GlobalId`  
-   - `b_mm`, `h_mm`  
-   - `width_status` (OK / NOT OK)  
-   - `As_min_mm2`, `M_Rd_kNm`, `V_Rd_c_kN`, `V_Rd_s_kN`  
-   - `source` (profile / type_profile / name_parse)
+In particular:
+- Minimum beam width (Eurocode 2)  
+- Minimum longitudinal reinforcement  
+- Minimum shear reinforcement  
 
-This provides transparent, model-based evidence for the claims in the ABD report.
+These were documented manually instead of being evaluated directly from the IFC model.
 
-### Instructions to run the tool
+---
 
-#### Requirements
+## Description of the Tool
 
+This tool is a Python script built using **IfcOpenShell** and **Pandas**, designed to:
+
+### ✔ 1. Read all `IfcBeam` elements from an IFC model  
+### ✔ 2. Extract beam cross-section dimensions from:
+- `IfcMaterialProfileSetUsage`
+- `IfcMaterialProfileSet`
+- `IfcExtrudedAreaSolid.SweptArea`
+- Beam names (e.g. “300x450”, “300x450 mm”)
+
+### ✔ 3. Normalise the extracted geometry:
+- Convert to millimetres  
+- Identify  
+  - `b_mm` = beam width  
+  - `h_mm` = beam height  
+
+### ✔ 4. Automatically evaluate Eurocode 2 minimum requirements:
+- Minimum width (default: **200 mm**)  
+- Minimum longitudinal reinforcement  
+- Minimum shear resistance  
+- Minimum stirrup reinforcement  
+
+### ✔ 5. Compute key design values:
+- `As_min_mm2`  
+- `M_Rd_kNm`  
+- `V_Rd_c_kN`  
+- `V_Rd_s_kN`  
+
+### ✔ 6. Export all values to an Excel file (`beam_results.xlsx`), including:
+| Field | Description |
+|-------|-------------|
+| GlobalId | IFC beam ID |
+| b_mm | beam width |
+| h_mm | beam height |
+| width_status | OK / NOT OK |
+| As_min_mm2 | Minimum reinforcement |
+| M_Rd_kNm | Bending resistance |
+| V_Rd_c_kN | Shear resistance (concrete) |
+| V_Rd_s_kN | Shear resistance (stirrups) |
+| source | Profile / Name parsing / IFC Material section |
+
+This provides **transparent** and **model-based evidence** for the structural claims in the ABD report.
+
+---
+
+# 2. Instructions to Run the Tool
+
+## Requirements
 - Python 3.x  
-- Packages:
+- Required packages:
 
 ```bash
 pip install ifcopenshell pandas openpyxl
-
-
-
-## Process Diagrams
-
-### As-Is Workflow
-![As-Is](img/AS-IS.svg)
-
-### To-Be Workflow
-![To-Be](img/TO-BE.png)
 
 
 
