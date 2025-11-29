@@ -57,4 +57,7 @@ This provides transparent, model-based evidence for the claims in the ABD report
 ```bash
 pip install ifcopenshell pandas openpyxl
 
-   
+
+## To-Be Workflow
+![To-Be Diagram](img/TO-BE.png)
+
