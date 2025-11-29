@@ -91,9 +91,44 @@ This provides **transparent** and **model-based evidence** for the structural cl
 
 ---
 
-# 3.Running the program
+## Running the program
 ### ✔ 1. Place your IFC file on your local machine.
 
 ### ✔ 2. Edit the path inside main.py:
-model_path = Path("C:/Users/.../YourModel.ifc")
+`model_path = Path("C:/Users/.../YourModel.ifc")`
 
+### ✔ 3. From the A3 folder, run:
+
+`python main.py`
+
+### ✔ 4.The tool generates:
+`beam_results.xlsx`
+
+in the folder
+
+# 3. Process Diagrams
+3.1 As-Is Workflow
+
+3.2 To-Be Workflow
+
+# 4. IDS – Information Delivery Specification
+
+This IDS ensures that the IFC model contains the minimum information required for the tool.
+
+`Requirements for Beam Width Automation:
+
+Entities:
+- Must contain IfcBeam elements  
+
+Properties:
+- Dimensions must be provided through at least ONE of the following:
+  - IfcMaterialProfileSetUsage.Profile
+  - IfcMaterialProfileSet.Profile
+  - IfcExtrudedAreaSolid.SweptArea
+  - Valid dimensional naming pattern (e.g. “300x450”)  
+
+Units:
+- Must contain IfcUnitAssignment with LENGTHUNIT (mm or m)
+
+Material:
+- Must contain concrete material (fck value defined externally in script)`
