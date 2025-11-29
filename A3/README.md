@@ -132,3 +132,70 @@ Units:
 
 Material:
 - Must contain concrete material (fck value defined externally in script)`
+
+
+The corresponding IDS file is included as:
+
+`A3/beam_width.ids`
+
+# 5. Value of the Tool
+## 5.1 Business Value
+
+This tool provides significant value to engineering teams:
+
+✔ Saves time
+
+Manual Eurocode 2 checks on dozens of beams can take several hours.
+
+✔ Reduces human error
+
+Automated extraction avoids incorrect dimensions from outdated drawings.
+
+✔ Improves traceability
+
+Generates a full Excel report, where every number is backed by IFC data.
+
+✔ Supports quality assurance
+
+Model-based verification improves the ABD report and the final hand-in.
+
+## 5.2 Societal Value
+✔ Safer structures
+
+Ensures reinforced concrete beams meet essential Eurocode 2 minimums.
+
+✔ Supports digital construction workflows
+
+Promotes transparent and reproducible engineering decisions.
+
+✔ Encourages automation
+
+A step toward fully automated code checking in BIM.
+
+# 6. Files in This Repository
+A3/
+│
+├── main.py                 # Main script to run the tool
+├── beam_check_tool.py      # Logic for EC2 checks
+├── beam_width.ids          # IDS file
+├── README.md               # This document
+│
+└── img/
+    ├── AS-IS.svg
+    └── TO-BE.png
+
+# 7. Conclusion
+
+This tool automates the verification of reinforced concrete beam requirements directly from the IFC model.
+
+It improves:
+
+efficiency
+
+transparency
+
+safety
+
+reproducibility
+
+and supports the goals of the Advanced Building Design course.
