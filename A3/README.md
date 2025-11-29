@@ -90,5 +90,59 @@ This provides **transparent** and **model-based evidence** for the structural cl
 ```bash
 pip install ifcopenshell pandas openpyxl
 
+```bash
+pip install ifcopenshell pandas openpyxl
+
+---
+
+Running the program
+Place your IFC file on your local machine.
+
+Edit the path inside main.py:
+
+python
+Kopier kode
+model_path = Path("C:/Users/.../YourModel.ifc")
+Run the script from the A3 folder:
+
+bash
+Kopier kode
+python main.py
+The tool generates:
+
+text
+Kopier kode
+beam_results.xlsx
+in the A3 folder.
+
+3. Process Diagrams
+3.1 As-Is Workflow
+
+
+3.2 To-Be Workflow
+
+
+4. IDS – Information Delivery Specification
+This IDS ensures that the IFC model contains the minimum information required for the tool.
+
+xml
+Kopier kode
+<ids>
+  <specifications>
+    <specification name="Beam Data Requirements">
+      <applicability>
+        <entity name="IfcBeam"/>
+      </applicability>
+      <requirements>
+        <property name="Profile" cardinality="1..1"/>
+        <property name="Material" cardinality="1..1"/>
+      </requirements>
+    </specification>
+  </specifications>
+</ids>
+markdown
+Kopier kode
+
+
 
 
