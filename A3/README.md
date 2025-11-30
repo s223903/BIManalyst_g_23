@@ -174,15 +174,15 @@ A step toward fully automated code checking in BIM.
 
 # 6. Files in This Repository
 A3/
+│── img/
+│     ├── AS-IS.svg
+│     ├── TO-BE.png
 │
-├── main.py                 # Main script to run the tool
-├── beam_check_tool.py      # Logic for EC2 checks
-├── beam_width.ids          # IDS file
-├── README.md               # This document
-│
-└── img/
-    ├── AS-IS.svg
-    └── TO-BE.png
+│── beam_check_tool.py
+│── beam_width.ids
+│── main.py
+│── README.md   ← This file
+
 
 # 7. Conclusion
 
