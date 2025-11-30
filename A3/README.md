@@ -141,7 +141,6 @@ The current ABD workflow relies on:
 
 This process is time-consuming, error-prone and not traceable.
 ![As-Is](img/AS-IS.svg)
-![To-Be](img/TO-BE.png)
 
 
 ### To-Be Workflow (Automated with Our Tool)
@@ -174,7 +173,7 @@ The proposed workflow automates the entire verification process:
 
 This workflow eliminates manual checking and provides traceable, data-driven documentation.
 
-
+![To-Be](img/TO-BE.png)
 # 4. IDS – Information Delivery Specification
 
 This IDS ensures that the IFC model contains the minimum information required for the tool.
