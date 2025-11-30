@@ -1,20 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ids xmlns="http://standards.buildingsmart.org/IDS">
-  <specification name="Beam dimension naming" ifcVersion="IFC4">
+  <specification name="Beam Width Requirements" ifcVersion="IFC4">
+    
+    <!-- Apply rules only to beams -->
     <applicability>
       <entity>
         <name>IfcBeam</name>
       </entity>
     </applicability>
+
     <requirements>
+      
+      <!-- Requirement 1: Beam must have SOME form of profile information -->
+      <property>
+        <name>Profile</name>
+        <cardinality>1..1</cardinality>
+      </property>
+
+      <!-- Requirement 2: The model must have length units defined -->
+      <unit>
+        <type>LENGTHUNIT</type>
+      </unit>
+
+      <!-- Requirement 3: OPTIONAL naming pattern fallback -->
       <attribute>
         <name>Name</name>
         <value>
-          <!-- e.g. 300x450, 300 x 450 mm, 0.30x0.45 m -->
           <simpleValue pattern="\d+\s*[xX]\s*\d+.*"/>
         </value>
       </attribute>
+
     </requirements>
+
   </specification>
 </ids>
-
