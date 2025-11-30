@@ -11,9 +11,10 @@ from beam_check_tool import (
     shear_capacity_concrete,
     shear_capacity_min_stirrups,
     effective_depth,
-    min_stirrups_s,
     to_mm_scale
 )
+
+
 
 # -----------------------------------------
 # USER SETTINGS
