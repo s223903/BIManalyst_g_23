@@ -1,6 +1,5 @@
 # main.py — Entry point for the A3 beam checking tool
-# Authors: Aisha & Fashi — DTU ABD 2025
-
+# Authors: Aisha & Fashi 
 from pathlib import Path
 import ifcopenshell
 import pandas as pd
