@@ -143,32 +143,32 @@ The corresponding IDS file is included as:
 
 This tool provides significant value to engineering teams:
 
-✔ Saves time
+ Saves time
 
 Manual Eurocode 2 checks on dozens of beams can take several hours.
 
-✔ Reduces human error
+ Reduces human error
 
 Automated extraction avoids incorrect dimensions from outdated drawings.
 
-✔ Improves traceability
+ Improves traceability
 
 Generates a full Excel report, where every number is backed by IFC data.
 
-✔ Supports quality assurance
+ Supports quality assurance
 
 Model-based verification improves the ABD report and the final hand-in.
 
 ## 5.2 Societal Value
-✔ Safer structures
+ Safer structures
 
 Ensures reinforced concrete beams meet essential Eurocode 2 minimums.
 
-✔ Supports digital construction workflows
+- Supports digital construction workflows
 
 Promotes transparent and reproducible engineering decisions.
 
-✔ Encourages automation
+- Encourages automation
 
 A step toward fully automated code checking in BIM.
 
