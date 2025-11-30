@@ -39,32 +39,32 @@ These were documented manually instead of being evaluated directly from the IFC 
 
 This tool is a Python script built using **IfcOpenShell** and **Pandas**, designed to:
 
-### ✔ 1. Read all `IfcBeam` elements from an IFC model  
-### ✔ 2. Extract beam cross-section dimensions from:
+###  1. Read all `IfcBeam` elements from an IFC model  
+###  2. Extract beam cross-section dimensions from:
 - `IfcMaterialProfileSetUsage`
 - `IfcMaterialProfileSet`
 - `IfcExtrudedAreaSolid.SweptArea`
 - Beam names (e.g. “300x450”, “300x450 mm”)
 
-### ✔ 3. Normalise the extracted geometry:
+###  3. Normalise the extracted geometry:
 - Convert to millimetres  
 - Identify  
   - `b_mm` = beam width  
   - `h_mm` = beam height  
 
-### ✔ 4. Automatically evaluate Eurocode 2 minimum requirements:
+###  4. Automatically evaluate Eurocode 2 minimum requirements:
 - Minimum width (default: **200 mm**)  
 - Minimum longitudinal reinforcement  
 - Minimum shear resistance  
 - Minimum stirrup reinforcement  
 
-### ✔ 5. Compute key design values:
+###  5. Compute key design values:
 - `As_min_mm2`  
 - `M_Rd_kNm`  
 - `V_Rd_c_kN`  
 - `V_Rd_s_kN`  
 
-### ✔ 6. Export all values to an Excel file (`beam_results.xlsx`), including:
+###  6. Export all values to an Excel file (`beam_results.xlsx`), including:
 | Field | Description |
 |-------|-------------|
 | GlobalId | IFC beam ID |
@@ -92,16 +92,16 @@ This provides **transparent** and **model-based evidence** for the structural cl
 ---
 
 ## Running the program
-### ✔ 1. Place your IFC file on your local machine.
+###  1. Place your IFC file on your local machine.
 
-### ✔ 2. Edit the path inside main.py:
+###  2. Edit the path inside main.py:
 `model_path = Path("C:/Users/.../YourModel.ifc")`
 
-### ✔ 3. From the A3 folder, run:
+###  3. From the A3 folder, run:
 
 `python main.py`
 
-### ✔ 4.The tool generates:
+###  4.The tool generates:
 `beam_results.xlsx`
 
 in the folder
