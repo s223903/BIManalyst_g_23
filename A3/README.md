@@ -7,6 +7,29 @@
 # 1. About the Tool
 
 ## Problem / Claim
+## Use Case Requirements
+
+To fully support automated verification of structural beam requirements, the BIM model must contain:
+
+1. **Beam Geometry**
+   - Width and height (b × h) from:
+     - IfcMaterialProfileSetUsage  
+     - SweptArea → IfcExtrudedAreaSolid  
+     - or Name-based dimensions (“300x450 mm”)
+
+2. **Material Properties**
+   - Concrete strength class (e.g., C30/37)
+   - Steel reinforcement class (B500B)
+
+3. **Location & Identification**
+   - Every beam must have a unique `GlobalId`
+   - Beam type and role (primary beam where applicable)
+
+4. **Units & Model Context**
+   - Model length unit (mm or m)
+   - Consistent coordinate system
+
+These requirements describe the minimum level of information the tool needs to verify EC2 beam dimensions and reinforcement assumptions.
 
 In the Advanced Building Design (ABD) course, structural teams frequently claim:
 
@@ -107,9 +130,50 @@ This provides **transparent** and **model-based evidence** for the structural cl
 in the folder
 
 # 3. Process Diagrams
-3.1 As-Is Workflow
+## Process Explanation
 
-3.2 To-Be Workflow
+### As-Is Workflow (Manual)
+The current ABD workflow relies on:
+- Manually reading beam dimensions from drawings
+- Entering values into spreadsheets
+- Performing EC2 minimum checks by hand
+- No connection between BIM model and documented claims
+
+This process is time-consuming, error-prone and not traceable.
+![As-Is](img/AS-IS.svg)
+![To-Be](img/TO-BE.png)
+
+
+### To-Be Workflow (Automated with Our Tool)
+The proposed workflow automates the entire verification process:
+
+1. **Import IFC Model**  
+   The script extracts all `IfcBeam` objects and identifies their cross-section.
+
+2. **Extract Dimensions and Material Data**  
+   The tool reads:
+   - Profile dimensions  
+   - SweptArea geometries  
+   - Name-parsed dimensions when necessary  
+
+3. **Run Eurocode Calculations**  
+   The tool computes:
+   - Minimum width check  
+   - Minimum longitudinal reinforcement  
+   - Minimum shear resistance  
+
+4. **Generate Evidence File**  
+   The script outputs an Excel file (`beam_results.xlsx`) containing:
+   - Dimensions  
+   - Status of EC2 width check  
+   - Design resistances  
+   - Data source (profile / type / name)
+
+5. **Use in ABD Report**  
+   The automatically generated results act as transparent, model-based evidence for structural safety claims.
+
+This workflow eliminates manual checking and provides traceable, data-driven documentation.
+
 
 # 4. IDS – Information Delivery Specification
 
@@ -185,17 +249,17 @@ A3/
 
 
 # 7. Conclusion
+## How the Tool Solves the Use Case
 
-This tool automates the verification of reinforced concrete beam requirements directly from the IFC model.
+The developed tool directly addresses the identified ABD use case:
 
-It improves:
+- It ensures that every primary reinforced concrete beam in the BIM model is checked  
+  against Eurocode 2 minimum width and minimum reinforcement rules.
+- It replaces manual spreadsheet-based verification with a fully automated workflow.
+- It connects the structural model (IFC) to the performance claim in the ABD report.
+- It generates transparent, repeatable and auditable evidence in Excel format.
+- It enables consistency, traceability and correctness in BIM-based structural design.
 
-efficiency
+This demonstrates a complete alignment between the BIM Use Case goal,
+the tool’s functionality, the BPMN workflow, and the Information Exchange requirements.
 
-transparency
-
-safety
-
-reproducibility
-
-and supports the goals of the Advanced Building Design course.
