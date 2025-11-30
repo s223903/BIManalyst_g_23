@@ -192,6 +192,7 @@ This workflow eliminates manual checking and provides traceable, data-driven doc
 
 # Conclusion
 
-The tool automates Eurocode 2 checks for reinforced concrete beams by reading geometry directly from the IFC model. It replaces manual calculations with a fast, traceable, and model-based verification workflow. The generated Excel output provides clear evidence for structural requirements and supports efficient validation in the Advanced Building Design process.
+The tool automates Eurocode 2 checks for reinforced concrete beams by reading geometry directly from the IFC model. It then uses these dimensions to calculate the required shear and flexural reinforcement for each beam. This replaces manual calculations with a fast, traceable and model-based verification workflow, supported by an automatically generated Excel report.
+
 
 
