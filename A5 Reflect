@@ -1,8 +1,8 @@
-# A5 – Final Reflection & Wrap-up  
+A5 – Final Reflection & Wrap-up  
 Aisha  s223903 
 Group 23 – BIManalyst, Structural Focus
 
-## 1. My Learning Journey
+1. My Learning Journey
 
 When the course started, I had a basic understanding of Python and a solid structural background, but connecting those two worlds was still unfamiliar. IFC felt large and abstract, and I didn’t really know how to approach it beyond simple element queries.
 
@@ -10,7 +10,7 @@ Over the weeks, this changed quite quickly. As we built our tool, I learned how 
 
 By the time we finished A3, I felt comfortable moving around IFC files, extracting the geometry we needed, and connecting that to Eurocode rules. The biggest shift for me is that I now think of structural claims (like “minimum width 200 mm”) as something that can be checked automatically rather than something I verify once in a spreadsheet.
 
-## 2. Shared Work: The Tool and the Tutorial
+2. Shared Work: The Tool and the Tutorial
 
 Our beam checking tool grew out of the claim from A2. We both contributed to the logic, and we ended up with a script that:
 
@@ -26,7 +26,7 @@ Creating the tutorial in A4 helped solidify everything. Explaining the steps for
 
 I see the tool’s natural place in **ABD Stage C (Verification & Analysis)**, with the spreadsheet output benefiting **Stage D (Documentation)** as part of evidence-based reporting.
 
-## 3. What I Still Want to Learn
+3. What I Still Want to Learn
 
 Even though I feel much more confident now, there are still areas I want to develop:
 
@@ -39,28 +39,27 @@ The course also gave me ideas for a future thesis. I can imagine exploring autom
 
 If I could adjust something in the course, I might prefer slightly fewer tool introductions and more time spent on testing and refining the tools we build.
 
-## 4. Future Use of OpenBIM
+4. Future Use of OpenBIM
 
 For my thesis, I am likely to use OpenBIM again — either for automated structural checking or for a workflow that mixes IFC with simulation.
 
 In terms of career, I am almost certain that BIM-based verification will be part of structural engineering in the coming years. Automating EC2 checks from IFC models seems like something that will quickly shift from “nice to have” to “expected”.
 
-## 5. Wrap-up of A1–A5
+5. Wrap-up of A1–A5
 
-- **A1** taught me to treat BIM as evidence rather than just geometry.  
-- **A2** helped us formulate a clear, testable structural claim.  
-- **A3** turned that claim into working code.  
-- **A4** made us explain that work to others.  
-- **A5** ties the full learning journey together.  
+- A1 taught me to treat BIM as evidence rather than just geometry.  
+- A2 helped us formulate a clear, testable structural claim.  
+- A3 turned that claim into working code.  
+- A4 made us explain that work to others.  
+- A5 ties the full learning journey together.  
 
 Overall, the course has given me a practical understanding of how OpenBIM can support structural engineering, not just in concept but through hands-on tools that actually check design assumptions.
 
-
-# A5 – Final Reflection & Wrap-up  
+A5 – Final Reflection & Wrap-up  
 Fasih Iqbal (s252372)
 Group 23 – BIManalyst, Structural Focus
 
-## 1. My Learning Journey
+1. My Learning Journey
 
 At the start of the semester, I felt confident with Eurocode design and structural reasoning, but the digital side of things — especially IFC — felt unfamiliar. I could follow Python logic if I concentrated, but I didn’t really understand how information was structured in a BIM model.
 
@@ -68,7 +67,7 @@ Working through the assignments gradually changed this. As we built the tool tog
 
 By the end of the course, I had a much clearer picture of how structural engineering data and OpenBIM can support each other. I wouldn’t call myself a programmer, but I now feel comfortable participating in a workflow where coding is part of the engineering process.
 
-## 2. Shared Work: The Tool and the Tutorial
+2. Shared Work: The Tool and the Tutorial
 
 Our joint tool for A3 became the main reference point for my learning. The core idea was simple — check that beams meet Eurocode 2 requirements — but making it reliable took a lot of thinking. We had to combine several types of profile extraction, handle missing data, and make sure the calculations matched the code.
 
@@ -78,7 +77,7 @@ The A4 tutorial was also valuable because it forced us to turn a technical scrip
 
 I agree with that — it reflects what we experienced when writing the script. The tool belongs mainly in **ABD Stage C**, where design requirements are checked, but it naturally provides documentation for **Stage D** as well.
 
-## 3. What I Still Want to Learn
+3. What I Still Want to Learn
 
 There are several areas I want to improve moving forward:
 
@@ -91,19 +90,19 @@ The course also gave me a better sense of what a potential thesis might look lik
 
 On the course design: I liked the freedom, but I can also see how having slightly narrower use case options might make the early weeks easier for people who are less certain of their direction.
 
-## 4. Future Use of OpenBIM
+4. Future Use of OpenBIM
 
 Whether my thesis ends up being directly BIM-related or not, I expect to use IFC as a data source again. The ability to tie model information to engineering checks is something I now see real value in.
 
 Professionally, I am quite confident OpenBIM will shape the way we communicate and verify designs. Automating Eurocode-related checks feels like something the industry will rely on more and more, especially as models become the primary source of truth.
 
-## 5. Wrap-up of A1–A5
+5. Wrap-up of A1–A5
 
-- **A1** introduced the idea of treating models as evidence.  
-- **A2** helped us define a clear and practical structural claim.  
-- **A3** was where the claim became a functioning tool.  
-- **A4** turned our technical work into something teachable.  
-- **A5** is where I look back and connect everything to my future learning path.  
+- A1 introduced the idea of treating models as evidence.  
+- A2 helped us define a clear and practical structural claim.  
+- A3 was where the claim became a functioning tool.  
+- A4 turned our technical work into something teachable.  
+- A5 is where I look back and connect everything to my future learning path.  
 
 Overall, my biggest takeaway is that OpenBIM is not separate from structural engineering — it can support and enhance it when used through tools like the one we built.
 
